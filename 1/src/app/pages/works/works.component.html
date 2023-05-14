@@ -1,0 +1,29 @@
+<nav class="nav">
+  <ul class="nav__ul">
+      <li class="nav__li">
+          <span class="nav__span">Last work >>></span>
+      </li>
+      <li class="nav__li">
+          <a href="#" class="nav__a" [routerLink]="[ '/works/censor' ]" routerLinkActive="active">
+              Censor
+          </a>
+      </li>
+      <li class="nav__li">
+          <a href="#" class="nav__a" [routerLink]="[ '/works/userslist' ]" routerLinkActive="active">
+              Users
+          </a>
+      </li>
+      <li class="nav__li">
+          <a href="#" class="nav__a" [routerLink]="[ '/works/tasklist' ]" routerLinkActive="active">
+              Task
+          </a>
+      </li>
+      <span class="nav__null"></span>
+      <li class="nav__li">
+          <a href="#" class="nav__a nav__a_home" [routerLink]="[ '/home' ]">
+              Back to >>> Home
+          </a>
+      </li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>

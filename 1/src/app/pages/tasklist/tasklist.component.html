@@ -1,0 +1,36 @@
+<section class="section">
+  <div class="planner">
+      <div class="planner__header">
+          <h2 class="planner__h2">Count of task {{ taskCount }}</h2>
+      </div>
+      <div class="planner__new">
+          <input type="text"
+              class="input"
+              [(ngModel)]="taskName">
+          <button
+              class="btn btn-add"
+              (click)="addTask()">
+              Add
+          </button>
+      </div>
+      <div class="planner__data">
+          <app-table
+              [newTask]="sendName"
+              (sendCountOfTasks)="getCount($event)"
+              (sendEdit)="getIndex($event)">
+          </app-table>
+      </div>
+      <div
+          class="planner__edit"
+          *ngIf="isEdit">
+          <input type="text"
+              class="input input-update"
+              [(ngModel)]="newTaskName">
+          <button
+              class="btn btn-update"
+              (click)="updateTask()">
+              save
+          </button>
+      </div>
+  </div>
+</section>

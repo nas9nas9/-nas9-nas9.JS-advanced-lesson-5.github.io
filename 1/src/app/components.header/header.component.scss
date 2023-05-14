@@ -1,0 +1,19 @@
+@import '../../shared/styles/base.scss';
+@import '../../shared/styles/_variables.scss';
+
+.header{
+    width: 100vw;
+    height: $heigth_header;
+    background-color: $background_milk;
+    border-bottom: 1px solid $border_gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $font;
+    color: $text_dark;
+    &__h1 {
+        font-size: 1.8rem;
+        font-weight: bold;
+
+    }
+}

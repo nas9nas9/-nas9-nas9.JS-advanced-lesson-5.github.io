@@ -1,0 +1,53 @@
+@import '../../../shared/styles/base.scss';
+@import '../../../shared/styles/_variables.scss';
+
+.table {
+    width: 100%;
+    th {
+        height: 50px;
+        padding-left: 10px;
+        border-bottom: 1px solid $border_gray;
+        text-align: left;
+    }
+    td {
+        height: 60px;
+        padding-left: 10px;
+        border-bottom: 1px solid $border_gray;
+    }
+    tr:hover td {
+        background-color: $table_hover;
+    }
+}
+
+.btn {
+    height: 40px;
+    padding: 0 15px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    font-size: 1rem;
+    cursor: pointer;
+    &-yellow {
+        background-color: $yellow;
+        color: $text_dark;
+        &:hover {
+            background-color: $yellow_hover;
+        }
+        &:focus {
+            box-shadow: 0 0 0 3px $yellow_focus;
+        }
+    }
+    &-red {
+        background-color: $red;
+        color: $text_light;
+        &:hover {
+            background-color: $red_hover;
+        }
+        &:focus {
+            box-shadow: 0 0 0 3px $red_focus;
+        }
+        &:disabled {
+            background-color: $red_disabled;
+        }
+    }
+}

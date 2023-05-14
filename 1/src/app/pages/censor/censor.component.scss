@@ -1,0 +1,108 @@
+@import '../../shared/styles/base.scss';
+@import '../../shared/styles/_variables.scss';
+
+.section {
+    height: calc(100vh - (70px + 40px));
+    font-family: $font;
+    color: $text_dark;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.censor {
+    width: 640px;
+    background-color: $background_milk;
+    border-radius: 4px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    &__bad {
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: $text_dark;
+    }
+    &__list {
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: $red;
+    }
+    &__row {
+        display: flex;
+        column-gap: 10px;
+    }
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid $border_gray;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: $text_input;
+    outline: none;
+    &::placeholder {
+        color: $text_placeholder;
+    }
+    &:focus {
+        border-color: $border_blue;
+        box-shadow: 0 0 0 3px $blue_focus;
+    }
+    &-set {
+        height: 40px;
+    }
+    &-area {
+        height: 100px;
+        padding-top: 12px;
+        resize: none
+    }
+}
+
+.wrong {
+    border-color: $red;
+    &:focus {
+        border-color: $red;
+    }
+}
+
+.btn {
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    font-size: 1rem;
+    cursor: pointer;
+    &-yellow {
+        width: 95px;
+        background-color: $yellow;
+        color: $text_dark;
+        &:hover {
+            background-color: $yellow_hover;
+        }
+        &:focus {
+            box-shadow: 0 0 0 3px $yellow_focus;
+        }
+    }
+    &-red {
+        width: 95px;
+        background-color: $red;
+        color: $text_light;
+        &:hover {
+            background-color: $red_hover;
+        }
+        &:focus {
+            box-shadow: 0 0 0 3px $red_focus;
+        }
+    }
+    &-green {
+        width: 100%;
+        background-color: $green;
+        color: $text_light;
+        &:hover {
+            background-color: $green_hover;
+        }
+        &:focus {
+            box-shadow: 0 0 0 3px $green_focus;
+        }
+    }
+}

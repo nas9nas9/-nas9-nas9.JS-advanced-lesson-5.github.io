@@ -1,0 +1,147 @@
+@import '../../shared/styles/base.scss';
+@import '../../shared/styles/_variables.scss';
+
+.section {
+    height: calc(100vh - (70px + 40px));
+    padding: 55px 95px;
+    font-family: $font;
+    color: $text_dark;
+    display: flex;
+    flex-direction: column;
+}
+@media (max-width: 1240px) {
+    .section {
+        padding: 65px 50px;
+    }
+}
+@media (max-width: 1024px) {
+    .section {
+        padding: 40px 60px;
+    }
+}
+
+.wrapper {
+    max-width: 2000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    column-gap: 40px;
+}
+@media (max-width: 1024px) {
+    .wrapper {
+        flex-direction: column;
+    }
+}
+
+.input {
+    height: 40px;
+    margin-top: 12px;
+    padding: 10px;
+    border: 1px solid $border_gray;
+    border-radius: 4px;
+    outline: none;
+    font-size: 1rem;
+    color: $text_input;
+    &::placeholder {
+        color: $text_placeholder;
+    }
+    &:focus {
+        border-color: $border_blue;
+        box-shadow: 0 0 0 3px $blue_focus;
+    }
+}
+
+.wrong {
+    border-color: $red;
+    &:focus {
+        border-color: $red;
+    }
+}
+
+.btn {
+    height: 40px;
+    padding: 0 15px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    font-size: 1rem;
+    cursor: pointer;
+    &-green {
+        background-color: $green;
+        color: $text_light;
+        &:hover {
+            background-color: $green_hover;
+        }
+        &:focus {
+            box-shadow: 0 0 0 3px $green_focus;
+        }
+    }
+    &-cyan {
+        background-color: $cyan;
+        color: $text_light;
+        &:hover {
+            background-color: $cyan_hover;
+        }
+        &:focus {
+            box-shadow: 0 0 0 3px $cyan_focus;
+        }
+    }
+    &-yellow {
+        background-color: $yellow;
+        color: $text_dark;
+        &:hover {
+            background-color: $yellow_hover;
+        }
+        &:focus {
+            box-shadow: 0 0 0 3px $yellow_focus;
+        }
+    }
+    &-red {
+        background-color: $red;
+        color: $text_light;
+        &:hover {
+            background-color: $red_hover;
+        }
+        &:focus {
+            box-shadow: 0 0 0 3px $red_focus;
+        }
+        &:disabled {
+            background-color: $red_disabled;
+        }
+    }
+}
+
+.newUser {
+    width: 100%;
+    min-width: 300px;
+    height: 305px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &__label {
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.usersData {
+    width: 100%;
+    margin-top: 28px;
+    border-collapse: collapse;
+    &__tr {
+        height: 65px;
+        border-top: 1px solid $border_gray;
+        font-size: 16px;
+    }
+    &__thead tr {
+        height: 44px;
+        border-bottom: 2px solid $border_gray;
+        color: $text_dark;
+        text-align: left;
+    }
+    th, td {
+        padding: 0 18px 0 12px;
+    }
+}
